@@ -1,6 +1,7 @@
 #!/bin/sh -e
 git config --global user.email jorge.diazbenitosoriano@gmail.com
 git config --global user.name "Jorge Antonio Diaz-Benito Soriano"
+git config --global push.default simple
 git config --global commit.gpgsign true
 git config --global rebase.autosquash true
 git config --global core.autocrlf input
