@@ -1,4 +1,5 @@
 #!/bin/sh -e
+
 git config --global user.email jorge.diazbenitosoriano@gmail.com
 git config --global user.name "Jorge Antonio Diaz-Benito Soriano"
 git config --global push.default simple
@@ -9,6 +10,7 @@ git config --global commit.gpgsign true
 git config --global rebase.autosquash true
 git config --global core.autocrlf input
 git config --global core.editor 'subl -n -w'
+git config --global init.templatedir '~/.git_template'
 git config --global alias.forcepush 'push --force-with-lease'
 git config --global alias.commend 'commit --amend --no-edit'
 git config --global alias.it '!git init && git commit -m "root" --allow-empty'
