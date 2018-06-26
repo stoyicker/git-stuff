@@ -9,7 +9,10 @@ git config --global gpg.program gpg2
 git config --global commit.gpgsign true
 git config --global rebase.autosquash true
 git config --global core.autocrlf input
-git config --global core.editor 'subl -n -w'
+# Use this for Atom
+git config --global core.editor "atom --wait"
+# Use this for Sublime Text 3: 
+# git config --global core.editor 'subl -n -w'
 git config --global init.templatedir '~/.git_template'
 git config --global alias.forcepush 'push --force-with-lease'
 git config --global alias.commend 'commit --amend --no-edit'
