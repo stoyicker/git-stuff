@@ -24,4 +24,4 @@ git config --global alias.nuke '!git reset --hard ; git clean -fdx ; git submodu
 git config --global alias.lg "log --color --graph --date=short --pretty=format:'%Cred%h%Creset %Cgreen%ad%Creset %s%C(yellow)%d%Creset %C(bold blue)<%an>%Creset' --abbrev-commit"
 git config --global alias.assume-unchanged "update-index --assume-unchanged"
 git config --global alias.unassume-unchanged "update-index --no-assume-unchanged"
-git config --global alias.tagforcommit = "rev-list -n 1"
+git config --global alias.tagforcommit "rev-list -n 1"
