@@ -26,4 +26,4 @@ git config --global alias.assume-unchanged "update-index --assume-unchanged"
 git config --global alias.unassume-unchanged "update-index --no-assume-unchanged"
 git config --global alias.commitfortag "rev-list -n 1"
 # Call like this: git deepcopy remoturl folderWhereItWillBeCopiedInto
-git config --global alias.deepcopy '!f() { curl -O https://raw.githubusercontent.com/stoyicker/git-stuff/master/deepcopy $1 $2}; f'
+git config --global alias.deepcopy '!f() { curl https://raw.githubusercontent.com/stoyicker/git-stuff/master/deepcopy | bash -s $1 $2; }; f'
