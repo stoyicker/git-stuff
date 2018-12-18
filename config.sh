@@ -33,6 +33,14 @@ cd $2
 LOCAL_IFS=$IFS
 IFS="
 "
-for i in `git branch -a | grep -v HEAD | perl -ne 'chomp($_); s|^\*?\s*||; if (m|(.+)/(.+)| && not $d{$2}) {print qq(git branch --track $2 $1/$2 && git pull --all\n)} else {$d{$_}=1}'`; do eval $i;done 
+for i in `git branch -a 
+          | grep -v HEAD 
+          | perl -ne 'chomp($_); s|^\*?\s*||; if (m|(.+)/(.+)| && not $d{$2}) {
+            print qq(git branch --track $2 $1/$2 && git pull --all\n)
+          } else {
+            $d{$_}=1
+          }'`; 
+  do eval $i;
+done 
 IFS="$LOCAL_IFS"
 }; f'
