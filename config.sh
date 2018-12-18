@@ -25,3 +25,14 @@ git config --global alias.lg "log --color --graph --date=short --pretty=format:'
 git config --global alias.assume-unchanged "update-index --assume-unchanged"
 git config --global alias.unassume-unchanged "update-index --no-assume-unchanged"
 git config --global alias.commitfortag "rev-list -n 1"
+# Call like this: git deepcopy remoturl folderWhereItWillBeCopiedInto
+git config --global alias.deepcopy '!f() {
+set -e
+git clone $1 $2
+cd $2
+LOCAL_IFS=$IFS
+IFS="
+"
+for i in `git branch -a | grep -v HEAD | perl -ne 'chomp($_); s|^\*?\s*||; if (m|(.+)/(.+)| && not $d{$2}) {print qq(git branch --track $2 $1/$2 && git pull --all\n)} else {$d{$_}=1}'`; do eval $i;done 
+IFS="$LOCAL_IFS"
+}'
