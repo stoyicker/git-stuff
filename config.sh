@@ -9,8 +9,10 @@ git config --global gpg.program gpg2
 git config --global commit.gpgsign true
 git config --global rebase.autosquash true
 git config --global core.autocrlf input
+# Use this for Nano
+git config --global core.editor "nano"
 # Use this for Atom
-git config --global core.editor "atom --wait"
+# git config --global core.editor "atom --wait"
 # Use this for Sublime Text 3: 
 # git config --global core.editor 'subl -n -w'
 git config --global init.templatedir '~/.git_template'
