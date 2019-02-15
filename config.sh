@@ -26,6 +26,8 @@ git config --global alias.nuke '!git reset --hard ; git clean -fdx ; git submodu
 git config --global alias.lg "log --color --graph --date=short --pretty=format:'%Cred%h%Creset %Cgreen%ad%Creset %s%C(yellow)%d%Creset %C(bold blue)<%an>%Creset' --abbrev-commit"
 git config --global alias.assume-unchanged "update-index --assume-unchanged"
 git config --global alias.unassume-unchanged "update-index --no-assume-unchanged"
+git config --global alias.assumed-unchanged '!git ls-files -v | grep "^[a-z]"'
+git config --global alias.fstatus '!f() { git status && git assumed-unchanged; }; f'
 git config --global alias.commitfortag "rev-list -n 1"
 # Call like this: git deepcopy remoturl
 git config --global alias.deepcopy '!f() { curl https://raw.githubusercontent.com/stoyicker/git-stuff/master/deepcopy | bash -s $1 `echo $1 | grep -oP (?<=/)[^/.]+`; }; f'
