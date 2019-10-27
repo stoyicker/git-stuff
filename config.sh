@@ -5,7 +5,7 @@ git config --global user.name "Jorge Antonio Diaz-Benito Soriano"
 git config --global push.default simple
 git config --global pull.rebase true
 git config --global fetch.prune true
-git config --global gpg.program gpg2
+git config --global gpg.program gpg
 git config --global commit.gpgsign true
 git config --global rebase.autosquash true
 git config --global core.autocrlf input
