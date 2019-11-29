@@ -9,6 +9,7 @@ git config --global gpg.program gpg
 git config --global commit.gpgsign true
 git config --global rebase.autosquash true
 git config --global core.autocrlf input
+git config --global core.fileMode false
 # Use this for Nano
 git config --global core.editor "nano"
 # Use this for Atom
