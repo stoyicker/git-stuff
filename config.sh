@@ -35,3 +35,4 @@ git config --global alias.commitfortag "rev-list -n 1"
 git config --global alias.deepcopy '!f() { curl https://raw.githubusercontent.com/stoyicker/git-stuff/master/deepcopy | bash -s $1 `echo $1 | grep -oP (?<=/)[^/.]+`; }; f'
 git config --global alias.wdiff "diff --color-words"
 git config --global init.defaultBranch main
+git config --global merge.ff only
