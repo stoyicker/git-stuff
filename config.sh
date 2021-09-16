@@ -36,3 +36,4 @@ git config --global alias.deepcopy '!f() { curl https://raw.githubusercontent.co
 git config --global alias.wdiff "diff --color-words"
 git config --global init.defaultBranch main
 git config --global merge.ff only
+git config --global tag.forceSignAnnotated true
