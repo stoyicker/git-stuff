@@ -38,3 +38,4 @@ git config --global init.defaultBranch main
 git config --global merge.ff only
 git config --global tag.forceSignAnnotated true
 git config --global diff.renameLimit 999999
+git config --global push.autoSetupRemote true
