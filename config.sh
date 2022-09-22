@@ -39,3 +39,5 @@ git config --global merge.ff only
 git config --global tag.forceSignAnnotated true
 git config --global diff.renameLimit 999999
 git config --global push.autoSetupRemote true
+git config --global branch.autoSetupMerge always
+git config --global branch.autoSetupRebase always
