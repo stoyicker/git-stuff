@@ -1,6 +1,6 @@
 #!/bin/bash
 
-  REPORT_DIR="build/hook"
+REPORT_DIR="build/hook"
 rm -rf $REPORT_DIR || true
 mkdir -p ${REPORT_DIR}
 PIDSTOOUTPUTFILES=()
