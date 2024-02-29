@@ -16,7 +16,7 @@ TASK_FILE_DETEKT=${REPORT_DIR}/detekt.log
 ./run-detekt.sh > $TASK_FILE_DETEKT 2>&1 &
 PIDSTOOUTPUTFILES+=("$!:$TASK_FILE_DETEKT")
 
-  while :
+while :
 do
  INDEX=-1
  for PIDTOOUTPUTFILE in "${PIDSTOOUTPUTFILES[@]}"; do
