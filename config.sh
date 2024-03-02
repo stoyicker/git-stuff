@@ -20,7 +20,7 @@ git config --global core.editor "nano"
 git config --global init.templatedir '~/.git_template'
 git config --global alias.forcepush 'push --force-with-lease'
 git config --global alias.commend 'commit --amend --no-edit'
-git config --global alias.it '!git init && git commit -m "root" --allow-empty'
+git config --global alias.it '!git init && git commit -m "root" --allow-empty --no-verify'
 git config --global alias.list 'status --short --branch'
 git config --global alias.grog 'log --graph --abbrev-commit --decorate --all --format=format:"%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(dim white) - %an%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n %C(white)%s%C(reset)"'
 git config --global alias.fixup '!f() { FIXUP_INTO=$(git log --grep=$1 --pretty=format:"%h" | head -n 1) && git commit --fixup :/$1 && GIT_SEQUENCE_EDITOR=: git rebase -i --autosquash $FIXUP_INTO~1; }; f'
