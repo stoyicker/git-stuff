@@ -7,6 +7,7 @@ git config --global pull.rebase true
 git config --global fetch.prune true
 git config --global gpg.program gpg
 git config --global commit.gpgsign true
+git config --global tag.gpgsign true
 git config --global rebase.autosquash true
 git config --global core.autocrlf input
 git config --global core.fileMode false
