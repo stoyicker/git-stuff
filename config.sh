@@ -42,6 +42,10 @@ git config --global diff.renameLimit 999999
 git config --global push.autoSetupRemote true
 git config --global branch.autoSetupMerge always
 git config --global branch.autoSetupRebase always
-git config --global fetch.tagOpt --tags
-git config --global alias.set-commit-date '!f() { git commit --no-edit --no-verify --date="${1:-now}"; }; f'
+git config --global fetch.tagOpt --tagsgit config --global alias.redo-commit '!f() {
+  msg="$(git log -1 --pretty=%B)";
+  git reset --soft HEAD~1 &&
+  git commit -m "$msg" "$@";
+}; f'
+
 
