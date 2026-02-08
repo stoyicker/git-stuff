@@ -14,6 +14,7 @@ git config --global rebase.autosquash true
 git config --global core.autocrlf input
 git config --global core.fileMode false
 git config --global credential.helper store
+git config set advice.skippedCherryPicks false
 # Use this for Nano
 git config --global core.editor "nano"
 # Use this for Atom
