@@ -51,3 +51,4 @@ git config --global alias.redo-commit '!f() {
   git reset --soft HEAD~1 &&
   git commit -m "$msg" "$@";
 }; f'
+git config --global gui.encoding utf-8
